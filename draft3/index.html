@@ -13,8 +13,7 @@
 
 	<body ng-controller="tictactoeController">
 		<h1>-----tic tac toe-----</h1>
-		<h1>star wars edition</h1>
-        
+		<h1>star wars edition</h1>    
         
         <section ng-hide="boardcreated" class="boardcreation">
         <!-- this section is hidden when the board is created -->
@@ -29,8 +28,6 @@
         <section id="gameboard">
         <div ng-repeat="row in board">
           <span ng-repeat="field in row track by $index">
-            <!-- mark the spot with an X or O -->
-            <!-- <a> tag is being used to mark the spot -->
             <span ng-show="field == defaultSymbol">
                 <a ng-class="{xmark: field == 'X', omark: field == 'O'}" 
                    ng-click="takefield($parent.$index, $index, currentSymbol());">{{field}}
